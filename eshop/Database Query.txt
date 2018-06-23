@@ -1,0 +1,57 @@
+CREATE DATABASE IF NOT EXISTS dvdshop DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE dvdshop;
+
+CREATE TABLE dvd (
+p_id int(11) NOT NULL,
+  p_name varchar(50) NOT NULL,
+  p_genre varchar(50) NOT NULL,
+  p_year int(11) NOT NULL,
+  price double NOT NULL,
+  quantity int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+INSERT INTO dvd (p_id, p_name,p_genre,p_year, price, quantity) VALUES
+(1, 'Saw I', 'Horror', 1990, 120, 100),
+(2, 'Commando', 'Action', 1994, 100, 80),
+(3, 'Sherlock Holmes', 'Drama', 2014, 140, 90),
+(4, 'Avengers', 'Action', 2012, 140, 45),
+(5, 'Final Destination II', 'Horror', 2016, 160, 220),
+(6, 'Star Wars', 'Sci-fi', 2016, 160, 200);
+
+CREATE TABLE customers (
+user_id int(11) NOT NULL,
+  user_name varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+INSERT INTO customers (user_id, user_name, password) VALUES
+(1, 'user1', 'user1'),
+(2, 'user2', 'user2');
+
+
+CREATE TABLE admins (
+admin_id int(11) NOT NULL,
+  admin_name varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+INSERT INTO admins (admin_id, admin_name, password) VALUES
+(1, 'admin', 'admin');
+
+
+ALTER TABLE dvd
+ ADD PRIMARY KEY (p_id);
+
+ALTER TABLE customers
+ ADD PRIMARY KEY (user_id), ADD UNIQUE KEY user_name (user_name);
+
+ALTER TABLE admins
+ ADD PRIMARY KEY (admin_id), ADD UNIQUE KEY admin_name (admin_name);
+
+
+ALTER TABLE dvd
+MODIFY p_id int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE customers
+MODIFY user_id int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE admins
+MODIFY admin_id int(11) NOT NULL AUTO_INCREMENT;
