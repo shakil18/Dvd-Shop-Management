@@ -20,10 +20,12 @@ Here's a project's directory structure:
 
 ```text
 Dvd-Shop-Management
-├── classes			# source code
+├── eshop
+|   ├── classes			# source code
+|   └── web.xml			    # webpage index
 ├── README.md
-├── dvdshop.sql # database
-└── web.xml			# webpage index
+└── dvdshop.sql     # database
+
 ```
 
 <!-- REQUIREMENTS  -->
