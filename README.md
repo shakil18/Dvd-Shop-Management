@@ -22,6 +22,7 @@ Here's a project's directory structure:
 Dvd-Shop-Management
 ├── classes			# source code
 ├── README.md
+├── dvdshop.sql # database
 └── web.xml			# webpage index
 ```
 
