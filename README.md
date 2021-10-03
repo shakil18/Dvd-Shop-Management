@@ -40,4 +40,4 @@ Dvd-Shop-Management
 
 **Azizul Hakim Shakil** - [@ShakilAzizul](https://twitter.com/ShakilAzizul) - azizulhakim.shakil18@gmail.com
 
-Project Link: [https://github.com/shakil18/dvd-shop-management](https://github.com/shakil18/dvd-shop-management)
+Project Link: [https://github.com/shakil18/Dvd-Shop-Management](https://github.com/shakil18/Dvd-Shop-Management)
